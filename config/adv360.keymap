@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -54,11 +54,11 @@
 
         layer_dvorak {
             bindings = <
-&kp EQUAL       &kp N1         &kp N2          &kp N3              &kp N4            &kp N5  &trans                                                                &mo 4      &kp N6  &kp N7             &kp N8               &kp N9               &kp N0    &kp MINUS
-&kp TAB         &kp SQT        &kp COMMA       &kp DOT             &kp P             &kp Y   &trans                                                                &trans     &kp F   &kp G              &kp C                &kp R                &kp L     &kp SLASH
-&kp ESCAPE      &kp A          &hm LEFT_ALT O  &hm LEFT_CONTROL E  &hm LEFT_SHIFT U  &kp I   &trans         &kp LEFT_ALT  &kp RIGHT_ALT      &kp LGUI   &kp RCTRL  &trans     &kp D   &hm RIGHT_SHIFT H  &hm RIGHT_CONTROL T  &hm LS(RIGHT_ALT) N  &kp S     &kp BACKSLASH
-&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q           &kp J               &kp K             &kp X                                &kp HOME           &kp PG_UP                        &kp B   &kp M              &kp W                &kp V                &kp Z     &kp RSHIFT
-&mo 3           &kp GRAVE      &caps_word      &kp LEFT            &kp RIGHT                 &kp BACKSPACE  &kp DEL       &kp END            &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN             &kp LBKT             &kp RBKT  &mo 3
+&kp EQUAL       &kp N1         &kp N2          &kp N3              &kp N4            &kp N5  &trans                                                                    &mo 4      &kp N6  &kp N7             &kp N8               &kp N9               &kp N0    &kp MINUS
+&kp TAB         &kp SQT        &kp COMMA       &kp DOT             &kp P             &kp Y   &trans                                                                    &trans     &kp F   &kp G              &kp C                &kp R                &kp L     &kp SLASH
+&kp ESCAPE      &kp A          &hm LEFT_ALT O  &hm LEFT_CONTROL E  &hm LEFT_SHIFT U  &kp I   &trans         &kp LEFT_CONTROL  &kp RIGHT_ALT      &kp LGUI   &kp RCTRL  &trans     &kp D   &hm RIGHT_SHIFT H  &hm RIGHT_CONTROL T  &hm LS(RIGHT_ALT) N  &kp S     &kp BACKSLASH
+&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q           &kp J               &kp K             &kp X                                    &kp HOME           &kp PG_UP                        &kp B   &kp M              &kp W                &kp V                &kp Z     &kp RSHIFT
+&mo 3           &kp GRAVE      &caps_word      &kp LEFT            &kp RIGHT                 &kp BACKSPACE  &kp DEL           &kp END            &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN             &kp LBKT             &kp RBKT  &mo 3
             >;
         };
 
@@ -94,7 +94,7 @@
 
         layer_navigation {
             bindings = <
-&trans  &trans     &trans            &trans            &trans          &trans  &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &kp K_MUTE
+&trans  &trans     &trans            &trans            &trans          &trans  &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &kp C_MUTE
 &trans  &trans     &word_navigation  &trans            &trans          &trans  &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &kp C_VOL_UP
 &trans  &trans     &kp LEFT_ALT      &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &kp C_VOL_DN
 &trans  &kp LC(Z)  &kp LC(X)         &kp LC(C)         &kp LC(V)       &trans                  &trans      &trans                  &trans    &trans    &trans  &trans     &trans  &kp C_STOP
