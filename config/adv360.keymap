@@ -42,29 +42,39 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty {
             bindings = <
-&kp EQUAL   &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 2                                                               &mo 4      &kp N6  &kp N7             &kp N8              &kp N9           &kp N0                   &kp MINUS
-&kp TAB     &kp Q           &kp W           &kp E               &kp R             &kp T   &tog 1                                                               &none      &kp Y   &kp U              &kp I               &kp O            &kp P                    &kp BSLH
-&kp ESCAPE  &hm LEFT_WIN A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &tog 5    &kp LEFT_CONTROL  &kp RIGHT_ALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_WIN SEMICOLON  &kp SQT
+&kp EQUAL   &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 3                                                               &mo 5      &kp N6  &kp N7             &kp N8              &kp N9           &kp N0                   &kp MINUS
+&kp TAB     &kp Q           &kp W           &kp E               &kp R             &kp T   &tog 1                                                               &tog 2     &kp Y   &kp U              &kp I               &kp O            &kp P                    &kp BSLH
+&kp ESCAPE  &hm LEFT_WIN A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &tog 6    &kp LEFT_CONTROL  &kp RIGHT_ALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_WIN SEMICOLON  &kp SQT
 &kp LSHFT   &kp Z           &kp X           &kp C               &kp V             &kp B                               &kp HOME           &kp PG_UP                        &kp N   &kp M              &kp COMMA           &kp DOT          &kp FSLH                 &kp RSHFT
-&mo 3       &kp GRAVE       &caps_word      &kp LEFT            &kp RIGHT                 &kp BSPC  &kp DEL           &kp END            &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN            &kp LBKT         &kp RBKT                 &mo 3
+&mo 4       &kp GRAVE       &caps_word      &kp LEFT            &kp RIGHT                 &kp BSPC  &kp DEL           &kp END            &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN            &kp LBKT         &kp RBKT                 &mo 4
             >;
         };
 
-        layer_dvorak {
+        dvorak {
             bindings = <
-&kp EQUAL       &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &trans                                                                    &mo 4      &kp N6  &kp N7             &kp N8               &kp N9           &kp N0           &kp MINUS
+&kp EQUAL       &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &trans                                                                    &mo 5      &kp N6  &kp N7             &kp N8               &kp N9           &kp N0           &kp MINUS
 &kp TAB         &kp SQT         &kp COMMA       &kp DOT             &kp P             &kp Y   &trans                                                                    &trans     &kp F   &kp G              &kp C                &kp R            &kp L            &kp SLASH
 &kp ESCAPE      &hm LEFT_WIN A  &hm LEFT_ALT O  &hm LEFT_CONTROL E  &hm LEFT_SHIFT U  &kp I   &trans         &kp LEFT_CONTROL  &kp RIGHT_ALT      &kp LGUI   &kp RCTRL  &trans     &kp D   &hm RIGHT_SHIFT H  &hm RIGHT_CONTROL T  &hm RIGHT_ALT N  &hm RIGHT_WIN S  &kp BACKSLASH
 &kp LEFT_SHIFT  &kp SEMICOLON   &kp Q           &kp J               &kp K             &kp X                                    &kp HOME           &kp PG_UP                        &kp B   &kp M              &kp W                &kp V            &kp Z            &kp RSHIFT
-&mo 3           &kp GRAVE       &caps_word      &kp LEFT            &kp RIGHT                 &kp BACKSPACE  &kp DEL           &kp END            &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN             &kp LBKT         &kp RBKT         &mo 3
+&mo 4           &kp GRAVE       &caps_word      &kp LEFT            &kp RIGHT                 &kp BACKSPACE  &kp DEL           &kp END            &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN             &kp LBKT         &kp RBKT         &mo 4
+            >;
+        };
+
+        games {
+            bindings = <
+&kp ESC    &kp N1    &kp N2     &kp N3  &kp N4  &kp N5  &kp N6                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q     &kp W      &kp E   &kp R   &kp T   &kp F1                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp CAPS   &kp A     &kp S      &kp D   &kp F   &kp G   &kp F2     &kp LSHFT  &kp F3      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp Z     &kp X      &kp C   &kp V   &kp B                         &kp F4      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp LALT  &kp ENTER  &kp F6  &kp F7          &kp LCTRL  &kp SPACE  &kp F5      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_keypad {
             bindings = <
-&kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans                                      &mo 4   &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans                                      &mo 5   &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
 &trans     &trans  &trans  &trans  &trans  &trans  &trans                                      &none   &trans  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
 &trans     &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
 &trans     &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
@@ -74,7 +84,7 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 2                                      &mo 4   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 3                                      &mo 5   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
