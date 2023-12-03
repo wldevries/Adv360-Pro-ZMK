@@ -17,16 +17,18 @@
 
 / {
     behaviors {
-      #include "macros.dtsi"
+        #include "macros.dtsi"
       #include "version.dtsi"
       #ifndef VERSION_MACRO
-      macro_ver: macro_ver {
-        compatible = "zmk,behavior-macro";
-        label = "macro_version";
-        #binding-cells = <0>;
-        bindings = <&kp RET>;
-      };
-      #endif
+
+        macro_ver: macro_ver {
+            compatible = "zmk,behavior-macro";
+            label = "macro_version";
+            #binding-cells = <0>;
+            bindings = <&kp RET>;
+        };
+
+        #endif
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -48,6 +50,9 @@
         };
     };
 
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -63,7 +68,7 @@
 
         dvorak {
             bindings = <
-&kp EQUAL       &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &trans                                                                    &mo 5      &kp N6  &kp N7             &kp N8               &kp N9           &kp N0           &kp MINUS
+&kp EQUAL       &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &trans                                                                    &trans     &kp N6  &kp N7             &kp N8               &kp N9           &kp N0           &kp MINUS
 &kp TAB         &kp SQT         &kp COMMA       &kp DOT             &kp P             &kp Y   &trans                                                                    &trans     &kp F   &kp G              &kp C                &kp R            &kp L            &kp SLASH
 &kp ESCAPE      &hm LEFT_WIN A  &hm LEFT_ALT O  &hm LEFT_CONTROL E  &hm LEFT_SHIFT U  &kp I   &trans         &kp LEFT_CONTROL  &kp RIGHT_ALT      &kp LGUI   &kp RCTRL  &trans     &kp D   &hm RIGHT_SHIFT H  &hm RIGHT_CONTROL T  &hm RIGHT_ALT N  &hm RIGHT_WIN S  &kp BACKSLASH
 &kp LEFT_SHIFT  &kp SEMICOLON   &kp Q           &kp J               &kp K             &kp X                                    &kp HOME           &kp PG_UP                        &kp B   &kp M              &kp W                &kp V            &kp Z            &kp RSHIFT
@@ -73,11 +78,11 @@
 
         games {
             bindings = <
-&kp ESC    &kp N1    &kp N2     &kp N3  &kp N4  &kp N5  &kp N6                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB    &kp Q     &kp W      &kp E   &kp R   &kp T   &kp F1                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp CAPS   &kp A     &kp S      &kp D   &kp F   &kp G   &kp F2     &kp LSHFT  &kp F3      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp Z     &kp X      &kp C   &kp V   &kp B                         &kp F4      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp LALT  &kp ENTER  &kp F6  &kp F7          &kp LCTRL  &kp SPACE  &kp F5      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp ESC    &kp N1            &kp N2     &kp N3     &kp N4        &kp N5  &kp N6                                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q             &kp W      &kp E      &kp R         &kp T   &kp Y                                                       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp CAPS   &kp A             &kp S      &kp D      &kp F         &kp G   &kp I      &kp LSHFT  &kp LEFT_SHIFT        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp Z             &kp X      &kp C      &kp V         &kp B                         &kp LEFT_CONTROL      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&mo 4      &kp LEFT_CONTROL  &kp MINUS  &kp EQUAL  &kp LEFT_ALT          &kp SPACE  &kp ENTER  &kp LEFT_ALT          &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -93,7 +98,7 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 3                                      &mo 5   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &trans                                      &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
