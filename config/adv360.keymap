@@ -54,7 +54,7 @@
             label = "TAP_DANCE_LSHIFT";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_PARENTHESIS>,
+                <&mt LEFT_SHIFT LEFT_PARENTHESIS>,
                 <&kp LEFT_BRACE>,
                 <&kp LEFT_BRACKET>;
         };
@@ -64,7 +64,7 @@
             label = "TAP_DANCE_RSHIFT";
             #binding-cells = <0>;
             bindings =
-                <&kp RIGHT_PARENTHESIS>,
+                <&mt RSHIFT RIGHT_PARENTHESIS>,
                 <&kp RIGHT_BRACE>,
                 <&kp RIGHT_BRACKET>;
         };
