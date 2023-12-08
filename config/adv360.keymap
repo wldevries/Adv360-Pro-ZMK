@@ -58,7 +58,7 @@
                 <&kp LEFT_BRACE>,
                 <&kp LEFT_BRACKET>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
         };
 
         tap_dance_rshift: tap_dance_rshift {
@@ -70,7 +70,7 @@
                 <&kp RIGHT_BRACE>,
                 <&kp RIGHT_BRACKET>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
         };
 
         ht_hold_preferred: ht_hold_preferred {
