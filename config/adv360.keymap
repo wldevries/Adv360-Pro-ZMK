@@ -72,6 +72,33 @@
 
             tapping-term-ms = <150>;
         };
+
+        ht_hold_preferred: ht_hold_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_HOLD_PREFERRED";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        ht_lshift: ht_lshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_LSHIFT";
+            bindings = <&kp>, <&tap_dance_lshift>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        ht_rshift: ht_rshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_RSHIFT";
+            bindings = <&kp>, <&tap_dance_rshift>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -92,11 +119,11 @@
 
         dvorak {
             bindings = <
-&kp EQUAL                        &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &trans                                                                    &trans     &kp N6  &kp N7             &kp N8               &kp N9           &kp N0           &kp MINUS
-&kp TAB                          &kp SQT         &kp COMMA       &kp DOT             &kp P             &kp Y   &trans                                                                    &trans     &kp F   &kp G              &kp C                &kp R            &kp L            &kp SLASH
-&kp ESCAPE                       &hm LEFT_WIN A  &hm LEFT_ALT O  &hm LEFT_CONTROL E  &hm LEFT_SHIFT U  &kp I   &trans         &kp LEFT_CONTROL  &kp RIGHT_ALT      &kp LGUI   &kp RCTRL  &trans     &kp D   &hm RIGHT_SHIFT H  &hm RIGHT_CONTROL T  &hm RIGHT_ALT N  &hm RIGHT_WIN S  &kp BACKSLASH
-&hm LEFT_SHIFT LEFT_PARENTHESIS  &kp SEMICOLON   &kp Q           &kp J               &kp K             &kp X                                    &kp HOME           &kp PG_UP                        &kp B   &kp M              &kp W                &kp V            &kp Z            &hm RIGHT_SHIFT RIGHT_PARENTHESIS
-&mo 4                            &kp GRAVE       &caps_word      &kp LEFT            &kp RIGHT                 &kp BACKSPACE  &kp DEL           &kp END            &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN             &kp LBKT         &kp RBKT         &mo 4
+&kp EQUAL           &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &trans                                                                    &trans     &kp N6  &kp N7             &kp N8               &kp N9           &kp N0           &kp MINUS
+&kp TAB             &kp SQT         &kp COMMA       &kp DOT             &kp P             &kp Y   &trans                                                                    &trans     &kp F   &kp G              &kp C                &kp R            &kp L            &kp SLASH
+&kp ESCAPE          &hm LEFT_WIN A  &hm LEFT_ALT O  &hm LEFT_CONTROL E  &hm LEFT_SHIFT U  &kp I   &trans         &kp LEFT_CONTROL  &kp RIGHT_ALT      &kp LGUI   &kp RCTRL  &trans     &kp D   &hm RIGHT_SHIFT H  &hm RIGHT_CONTROL T  &hm RIGHT_ALT N  &hm RIGHT_WIN S  &kp BACKSLASH
+&ht_lshift LSHFT 0  &kp SEMICOLON   &kp Q           &kp J               &kp K             &kp X                                    &kp HOME           &kp PG_UP                        &kp B   &kp M              &kp W                &kp V            &kp Z            &ht_rshift RSHFT 0
+&mo 4               &kp GRAVE       &caps_word      &kp LEFT            &kp RIGHT                 &kp BACKSPACE  &kp DEL           &kp END            &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN             &kp LBKT         &kp RBKT         &mo 4
             >;
         };
 
