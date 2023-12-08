@@ -57,6 +57,8 @@
                 <&mt LEFT_SHIFT LEFT_PARENTHESIS>,
                 <&kp LEFT_BRACE>,
                 <&kp LEFT_BRACKET>;
+
+            tapping-term-ms = <150>;
         };
 
         tap_dance_rshift: tap_dance_rshift {
@@ -67,6 +69,8 @@
                 <&mt RSHIFT RIGHT_PARENTHESIS>,
                 <&kp RIGHT_BRACE>,
                 <&kp RIGHT_BRACKET>;
+
+            tapping-term-ms = <150>;
         };
     };
 
